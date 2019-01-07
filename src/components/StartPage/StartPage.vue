@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-      <img class="main-content" src="../../assets/img/.png"/>
+      <img class="main-content" src="../../assets/img/@2x.png"/>
       <span class="message">财税管理，一步到位</span>
     </div>
 </template>
@@ -14,8 +14,8 @@
 </script>
 
 <style scoped lang='stylus'>
+  /*后面需要根据情况把z-index给去掉*/
   .wrap
-    width 100%
     height 100%
     position relative
     z-index 10
@@ -26,8 +26,6 @@
       position absolute
       top 21.3%
       right 12.3%
-      bottom 38.5%
-      left 12,3%
     .message
       position absolute
       width 49.3%
