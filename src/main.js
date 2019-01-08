@@ -9,6 +9,7 @@ import App from './App'
 import router from './router'
 import axios from './api/ajax.js';
 import url from './api/url';
+import invoiceTop from './components/invoiceTop/invoiceTop' //使用全局组件
 import {
   removeItem
 } from './utils/utils';
@@ -18,6 +19,7 @@ Vue.config.productionTip = false
 Vue.prototype.$ajax = axios;
 Vue.prototype.$url = url;
 Vue.prototype.toast = toast;
+Vue.component("invoiceTop",invoiceTop)
 router.beforeEach((to, from, next) => {
   if (to.name === null) {
     from.name ? next({

@@ -1,10 +1,10 @@
 <template>
-    <div class="wrap">
-        <div>我的</div>
+    <div class="wap">
+        <footer></footer>
     </div>
 </template>
 <script>
-import footerVue from '../../components/vFooter.vue'
+import footerVue from '../../components/footer.vue'
 export default {
     components:{
         footerVue
