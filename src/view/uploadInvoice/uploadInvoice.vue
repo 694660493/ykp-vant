@@ -1,0 +1,139 @@
+<template>
+    <div class="wrap">
+      <invoiceTop :title='invoiceTopMsg' :bg_color="bg_color"></invoiceTop>
+      <div class="invoiceInput">
+        <div class="invoiceItemInfo_first">
+          <span class="msg">发票类型</span>
+          <div class="content">
+            收入发票
+            <span>▲</span>
+          </div>
+          
+        </div>
+        <div class="invoiceItemInfo-second">
+          <span class="msg">所属期</span>
+          <div class="content">
+            2018-09
+            <span>▲</span>
+          </div>
+          
+        </div>
+        <div class="invoiceItemInfo-third">
+          <span class="msg">文件上传</span>
+          <div class="uploadContent">
+            <div class="section_one">
+              <div>+</div>
+            </div>
+            <div class="section_two">
+              <div class="content">
+                <span>2018-12-29 11:22:33 | 共两张</span>
+                <img src="../../assets/img/pic.jpeg" alt="">
+              </div>
+            </div>
+            <div class="section_three">
+              <div class="content">
+                <span>2018-12-29 11:22:33 | 共两张</span>
+                <img src="../../assets/img/pic.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="invoiceItemInfo-fourth">
+          <span>备注</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <div class="invoiceInfo">
+        <!--暂时还没写-->
+      </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+              invoiceTopMsg:"上传发票",
+              bg_color:"#0AAFD0",
+            }
+        }
+    }
+</script>
+
+<style scoped lang='scss'>
+    .wrap{
+      width: 100%;
+      background-color: gray;
+      .invoiceInput{
+        padding-top: 20px;
+        width: 94.7%;
+        background-color: #fff;
+        margin: 10px auto ;
+        .invoiceItemInfo_first,.invoiceItemInfo-second{
+          position: relative;
+          display: flex;
+          padding: 0 10px 0 10px;
+          justify-content: space-between;
+          align-items: center;
+          .msg{
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #313131;
+            letter-spacing: 0;
+            line-height: 52px;
+          }
+          .content{
+            width: 265px;
+            height: 32px;
+            line-height: 32px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            padding:0 10px 0 10px;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .invoiceItemInfo-third{
+          display: flex;
+          padding: 0 10px 0 10px;
+          justify-content: space-around;
+          .uploadContent{
+            width: 265px;
+            height: 356px;
+            background: #F9F9F9;
+            border: 1px solid #D8D8D8;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            .section_one{
+              width: 80px;
+              height: 80px;
+              background-color: #fff;
+            }
+            .section_two,.section_three{
+              .content{
+                img{
+                  width: 80px;
+                  height: 80px;
+                }
+              }
+            }
+            
+          }
+        }
+        .invoiceItemInfo-fourth{
+          margin-top: 20px;
+          display: flex;
+          align-items: flex-start;
+          padding:0 10px 0 10px;
+          justify-content: space-around;
+          textarea{
+            border: 1px solid gray;
+            width: 264px;
+            height: 64px;
+          }
+        }
+      }
+      
+    }
+</style>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="24px" viewBox="0 0 28 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>分组 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14,133 L361,133 C363.209139,133 365,134.790861 365,137 L365,667 L10,667 L10,137 C10,134.790861 11.790861,133 14,133 Z" id="path-1"></path>
+        <filter x="-1.8%" y="-1.0%" width="103.7%" height="102.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.935825893   0 0 0 0 0.935825893   0 0 0 0 0.935825893  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="财税APP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.2.1-任务进度-社保明细" transform="translate(-293.000000, -269.000000)">
+            <rect fill="#F6FAFF" x="0" y="0" width="375" height="667"></rect>
+            <g id="矩形">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="分组-2" transform="translate(10.000000, 155.000000)">
+                <g id="分组-5" transform="translate(0.000000, 96.000000)">
+                    <rect id="矩形" x="0" y="0" width="355" height="60"></rect>
+                </g>
+            </g>
+            <g id="分组-6" transform="translate(293.000000, 269.000000)">
+                <g id="分组-7">
+                    <g id="分组-4" fill="#00B8D4">
+                        <path d="M12.3157895,6 L9.57894737,3.42857143 L2.73684211,3.42857143 C1.23157895,3.42857143 3.55271368e-15,4.58571429 3.55271368e-15,6 L3.55271368e-15,21.4285714 C3.55271368e-15,22.8428571 1.23157895,24 2.73684211,24 L23.9473684,24 C25.1105263,24 26,23.1642857 26,22.0714286 L26,8.57142857 C26,7.15714286 24.7684211,6 23.2631579,6 L12.3157895,6 Z" id="Shape"></path>
+                        <path d="M13.26,2.91428571 L10.3133333,5.32907052e-14 L2.94666667,5.32907052e-14 C1.326,5.32907052e-14 3.55271368e-15,1.31142857 3.55271368e-15,2.91428571 L3.55271368e-15,8.74285714 L26,8.74285714 L26,5.82857143 C26,4.22571429 24.674,2.91428571 23.0533333,2.91428571 L13.26,2.91428571 Z" id="Shape"></path>
+                    </g>
+                    <path d="M6.97115148,5 C5.67729014,5 4.51962472,5.9892562 4.31533083,7.33181818 L2,24 L24.5333333,24 C25.8271947,24 26.9848601,23.0107438 27.189154,21.6681818 L27.9453248,8.32107438 C28.2858147,6.62520661 26.9919533,5 25.2895042,5 L6.97115148,5 Z" id="Shape" fill="#00CDEC"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
