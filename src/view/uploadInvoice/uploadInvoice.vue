@@ -44,8 +44,27 @@
         </div>
       </div>
       <div class="invoiceInfo">
-        <!--暂时还没写-->
+        <div class="info_msg">修改记录</div>
+        <ul class="content">
+          <li class="content_item">
+            <span class="item_key">创建人</span>
+            <span class="item_value">李辞</span>
+          </li>
+          <li class="content_item">
+            <span class="item_key">创建时间</span>
+            <span class="item_value">2018年12月11日 17: 32: 31</span>
+          </li>
+          <li class="content_item">
+            <span class="item_key">最后修改人</span>
+            <span class="item_value">客户</span>
+          </li>
+          <li class="content_item">
+            <span class="item_key">最后修改时间</span>
+            <span class="item_value">2018年12月11日 17: 32: 31</span>
+          </li>
+        </ul>
       </div>
+      <van-button type="default" class="button">确认修改</van-button>
     </div>
 </template>
 
@@ -63,7 +82,7 @@
 <style scoped lang='scss'>
     .wrap{
       width: 100%;
-      background-color: gray;
+      background-color: #F9F9F9;
       .invoiceInput{
         padding-top: 20px;
         width: 94.7%;
@@ -118,7 +137,6 @@
                 }
               }
             }
-            
           }
         }
         .invoiceItemInfo-fourth{
@@ -134,6 +152,53 @@
           }
         }
       }
-      
+      .invoiceInfo{
+        width: 355px;
+        height: 196px;
+        background-color: #ffffff;
+        margin: 5px auto;
+        .info_msg{
+          width:80px;
+          height: 36px;
+          line-height: 36px;
+          font-family: PingFangSC-Medium;
+          font-size: 12px;
+          color: #7D7D7D;
+          letter-spacing: 0.38px;
+          text-align: left;
+        }
+        .content{
+          width: 100%;
+          padding-left: 10px;
+          .content_item{
+            height: 34px;
+            line-height: 34px;
+            &:nth-last-child(1){
+              .item_key{
+                display: block;
+                width: 59px;
+                height: 28px;
+                font-size: 12px;
+                line-height: 12px;
+                margin-right: 12px;
+                float: left;
+              }
+            }
+            .item_key{
+              display: block;
+              width: 71px;
+              float: left;
+              
+            }
+          }
+        }
+      }
+      .button{
+        width: 98.7%;
+        height: 44px;
+        background-image: linear-gradient(90deg, #3EECAE 0%, #09AED1 100%);
+        box-shadow: 0 -2px 4px 0 #D3D3D3;
+        border-radius: 4px;
+      }
     }
 </style>

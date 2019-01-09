@@ -1,7 +1,9 @@
 <template>
   <div class="invoiceTop" :style="{backgroundColor:bg_color }">
     <div class="backItem">
-      <span class="back"><</span>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-fanhui"></use>
+      </svg>
       <span class="backMsg">返回</span>
     </div>
     <span class="header">{{title}}</span>
@@ -9,23 +11,23 @@
 </template>
 
 <script>
-    //这是头部组件
+  //这是头部组件，包括返回，头部字符 (适用于1.4.1, 1.5.1, 1.6.1 ,1.7.1, 1.8.1 , 1.9.1, 1.10.1)
     export default {
+        props:{
+          title:String, //标题名称
+          bg_color:String  //主体背景颜色
+        },
         data() {
             return {
             
             }
         },
-        props:{
-          title:String,
-          bg_color:String
-        }
+        
     }
 </script>
 
 <style scoped lang='scss'>
   .invoiceTop{
-    position: relative;
     padding-top: 20px;
     height: 44px;
     line-height: 44px;
@@ -33,10 +35,16 @@
     .backItem{
       position: absolute;
       left: 20px;
-      .back{
+      display: flex;
+      align-items: center;
+      .icon{
+        vertical-align: middle;
         color: #FFFFFF;
+        font-size: 18px;
+        margin-top: 3px;
       }
       .backMsg{
+        margin-left: 3px;
         font-family: PingFangSC-Regular;
         font-size: 16px;
         color: #FFFFFF;
@@ -49,7 +57,7 @@
       font-size: 18px;
       color: #FFFFFF;
       letter-spacing: -0.43px;
-      text-align: center;
+      text-align: center;;
     }
   }
 </style>

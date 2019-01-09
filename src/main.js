@@ -9,7 +9,9 @@ import App from './App'
 import router from './router'
 import axios from './api/ajax.js';
 import url from './api/url';
-import invoiceTop from './components/invoiceTop/invoiceTop' //使用全局组件
+import invoiceTop from './components/invoiceTop/invoiceTop'
+import invoiceDetailItems from "./components/invoiceDetailItems/invoiceDetailItems"
+import invoiceDetailArr from "./components/invoiceDetailArr/invoiceDetailArr"
 import {
   removeItem
 } from './utils/utils';
@@ -19,7 +21,9 @@ Vue.config.productionTip = false
 Vue.prototype.$ajax = axios;
 Vue.prototype.$url = url;
 Vue.prototype.toast = toast;
-Vue.component("invoiceTop",invoiceTop)
+Vue.component("invoiceTop",invoiceTop) //定义全局组件 invoiceTop
+Vue.component("invoiceDetailItems",invoiceDetailItems) //定义全局组件 invoiceDetailItems
+Vue.component("invoiceDetailArr",invoiceDetailArr) //定义全局组件 invoiceDetailArr
 router.beforeEach((to, from, next) => {
   if (to.name === null) {
     from.name ? next({

@@ -4,6 +4,10 @@ import login from '@/view/login.vue';
 import salaryDetail from '@/view/page/employee/salaryDetail.vue';
 import invoiceDetail from '../view/invoiceDetail/invoiceDetail';
 import uploadInvoice from '../view/uploadInvoice/uploadInvoice';
+import invoiceAuth from '../view/invoiceAuth/invoiceAuth';
+import invoiceDetailEdit from '../view/invoiceDetailEdit/invoiceDetailEdit';
+import assetsLiabilities from "../view/assetsLiabilities/assetsLiabilities";
+import taxSituation from "../view/taxSituation/taxSituation";
 
 
 import {
@@ -31,7 +35,7 @@ export default new Router({
       name: 'uploadInvoice',
       component: uploadInvoice,
       meta: {
-        title: '登录页'
+        title: '上传页面'
       }
     },
 
@@ -40,7 +44,39 @@ export default new Router({
       name: 'invoiceDetail',
       component: invoiceDetail,
       meta: {
-        title: '登录页'
+        title: '发票采集页面'
+      }
+    },
+    {
+      path: '/auth',
+      name: 'invoiceAuth',
+      component: invoiceAuth,
+      meta: {
+        title: '发票认证页面'
+      }
+    },
+    {
+      path: '/invoiceedit',
+      name: 'invoiceDetailEdit',
+      component: invoiceDetailEdit,
+      meta: {
+        title: '发票认证编辑'
+      }
+    },
+    {
+      path: '/assets',
+      name: 'assetsLiabilities',
+      component: assetsLiabilities,
+      meta: {
+        title: '资产负债表'
+      }
+    },
+    {
+      path: '/tax',
+      name: 'taxSituation',
+      component: taxSituation,
+      meta: {
+        title: '纳税情况'
       }
     },
   {
