@@ -15,7 +15,6 @@
     "better-scroll": "^1.13.4",
     "es6-promise": "^4.2.4",
     "lib-flexible": "^0.3.2",
-    "md5.js": "^1.3.5",
     "postcss-px2rem": "^0.3.0",
     "px2rem-loader": "^0.1.9",
     "qrcodejs2": "^0.0.2",

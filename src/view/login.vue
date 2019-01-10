@@ -17,14 +17,14 @@
         <input type="password" name="vCode" class="vCode" placeholder="手机验证码">
       </div>
       <van-button type="default" class="button" size="small" @click="count" v-if="countTime==0">{{codeText}}</van-button>
-      <van-button type="default" class="button" size="small" @click="count" v-else disabled>剩余{{countTime}}s</van-button>
+      <van-button type="default" class="button" size="small" @click="count" v-else disabled>{{countTime}}s</van-button>
     </div>
     <div class="login-btn">
-      <span class="login-msg">登录</span>
+      <span class="login-msg" @click="changeToHome">登录</span>
     </div>
-    <div class="register">
-      <span class="register-msg">注册</span>
-    </div>
+    <!--<div class="register">-->
+      <!--<span class="register-msg">注册</span>-->
+    <!--</div>-->
     <div class="copyContent">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-banquan"></use>
@@ -58,6 +58,7 @@ export default {
     mounted() {
         // this.$refs.login_wap.style.height = document.body.clientHeight + "px";
         // console.log(document.body.clientHeight)
+
     },
     methods: {
         goPath(name){
@@ -104,6 +105,9 @@ export default {
               clearInterval(timeId);
             }
           },1000)
+        },
+        changeToHome(){
+          this.$router.push({path:"homepage"})
         }
     }
 };
@@ -131,7 +135,7 @@ export default {
         .icon{
           width: 20px;
           margin: 0 10px 0 10px;
-          color: gray;
+          color: #67e7c9;
           float: left;
           height: 100%;
           }
@@ -149,7 +153,7 @@ export default {
         line-height: 30px;
         .icon{
           width: 20px;
-          color: gray;
+          color: #67e7c9;
           float: left;
           margin: 0 10px 0 13px;
           height: 100%;
@@ -161,16 +165,14 @@ export default {
           }
       }
       .button{
-        margin:20px 20px 0 5px;
+        margin:28px 20px 0 5px;
         background-color: #3bc468;
         color: #fff;
         float: right;
         border-radius: 4px;
         width: 80px;
-        height: 36px;
+        height: 28px;
       }
-      
-      
     }
     .login-btn{
       width: 280px;
@@ -188,23 +190,13 @@ export default {
         color: #FFFFFF;
         letter-spacing: 0;
       }
-      
-    }
-    .register{
-      text-align: center;
-      margin-top: 69%;
-      .register-msg{
-        font-family: PingFangSC-Regular;
-        font-size: 14px;
-        color: #0CB2CF;
-        letter-spacing: 0;
-      }
+
     }
     .copyContent{
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 90px auto;
+      margin: 340px auto;
       text-align: center;
       width: 39.5%;
       height: 10.6%;
@@ -224,8 +216,8 @@ export default {
         height: 20px;
         line-height: 20px;
       }
-     
+
     }
   }
-  
+
 </style>

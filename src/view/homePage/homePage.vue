@@ -32,22 +32,26 @@
       <div class="companyForm">
         <p>企业报表</p>
         <div class="formList">
-          <div class="formItem">
-            <div class="fromImg"></div>
-            <p>企业负债表</p>
-          </div>
-          <div class="formItem">
-            <div class="fromImg"></div>
-            <p>利润表</p>
-          </div>
-          <div class="formItem">
-            <div class="fromImg"></div>
-            <p>纳税表</p>
-          </div>
-          <div class="formItem">
-            <div class="fromImg"></div>
-            <p>提示表</p>
-          </div>
+          <van-row type="flex" justify="space-around">
+            <van-col span="6">
+              <div class="itemImg"></div>
+              <p class="itemText">企业负债表</p>
+            </van-col>
+            <van-col span="6">
+              <div class="itemImg"></div>
+              <p class="itemText">利润表</p>
+            </van-col>
+          </van-row>
+          <van-row type="flex" justify="space-around">
+            <van-col span="6">
+              <div class="itemImg"></div>
+              <p class="itemText">纳税表</p>
+            </van-col>
+            <van-col span="6">
+              <div class="itemImg"></div>
+              <p class="itemText">提示表</p>
+            </van-col>
+          </van-row>
         </div>
       </div>
       <div class="progressSpeed">
@@ -66,7 +70,6 @@
             <p class="progressText">综合业务</p>
           </div>
         </div>
-        
       </div>
       <vFooter></vFooter>
     </div>
@@ -80,22 +83,28 @@
               scroll:""
             }
         },
-        mounted:function () {
-          this.$nextTick(function () {
+        mounted() {
+          this.$nextTick(() =>{
             //动态获取ul的宽度，但是还是不能滑动
             let totalWidth=0;
             let div=document.querySelector(".coopapationList")
-            Array.from(div.children).forEach(function (element,index) {
+            let array=Array.from(div.children);
+            array.forEach(function (element,index) {
               let style=window.getComputedStyle(element,null)
-              totalWidth+=parseInt(style.width)
+              console.log(style.marginRight);
+              index!==array.length-1 ? totalWidth+=parseInt(style.width)+parseInt(style.marginRight) : totalWidth+=parseInt(style.width)
+
             });
-            console.log(totalWidth);
             div.style.width=totalWidth+"px";
             this.$nextTick(()=>{
               if (!this.scroll) {
+                console.log("新建scroll");
+
                 this.scroll = new BScroll(".wrapper", {
-                  click: true
+                  click: true,
+                  scrollX: true,
                 });
+                console.log(this.scroll.hasHorizontalScroll);
               } else {
                 console.log("进入刷新方法");
                 this.scroll.refresh();
@@ -103,7 +112,7 @@
             });
             console.log(this.scroll);
           })
-          
+
         }
     }
 </script>
@@ -159,10 +168,10 @@
         text-align: left;
       }
       .wrapper{
-        width: 100%;
+        overflow: hidden;
         .coopapationList{
           display: flex;
-          flex-wrap: nowrap;
+          white-space: nowrap;
           .coopapationItem{
             flex-shrink: 0;
             float: left;
@@ -182,8 +191,19 @@
             .itemImg{
               width: 41px;
               height: 48px;
-              background: url("../../assets/img/coopaption_item_bg.svg");
+              background: url("../../assets/img/salary.svg") no-repeat;
             }
+            &:nth-child(2){
+              .itemImg{
+                background: url("../../assets/img/social_security.svg") no-repeat;
+              }
+            };
+            &:nth-child(3){
+              .itemImg{
+                background: url("../../assets/img/coopaption_item_bg.svg") no-repeat;
+              }
+            };
+
           }
         }
       }
@@ -195,7 +215,6 @@
       background-color: #fff;
       p{
         font-family: PingFangSC-Semibold;
-        padding-left: 10px;
         height: 36px;
         line-height: 36px;
         font-size: 14px;
@@ -204,31 +223,15 @@
         text-align: left;
       }
       .formList{
-        border-top: 1px solid #f6faff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 30px 0px 30px;
-        flex-wrap: wrap;
-        .formItem{
-          flex-shrink: 0;
-          width: 70px;
-          height: 70px;
-          margin-right: 70px;
-          .fromImg{
-            background: url("../../assets/img/tax.png") no-repeat;
-            background-size: cover;
-            width: 48px;
-            height: 37px;
-          }
-          p{
-            padding-left: 0;
-            font-family: PingFangSC-Regular;
-            font-size: 14px;
-            color: #313131;
-            letter-spacing: 0;
-            text-align: left;
-          }
+        .itemImg{
+          margin: 0 auto;
+          width: 50px;
+          height: 40px;
+          background: url("../../assets/img/tax.png") no-repeat;
+          background-size: cover;
+        }
+        .itemText{
+          text-align: center;
         }
       }
     }

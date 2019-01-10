@@ -9,6 +9,12 @@
    export default {
         data() {
             return {}
+        },
+        mounted(){
+          //需要设置跳转时间 ，可以商量
+          setTimeout(()=> {
+            this.$router.replace({path:"/login"})
+          },2000)
         }
     }
 </script>

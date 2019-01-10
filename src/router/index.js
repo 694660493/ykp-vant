@@ -22,7 +22,7 @@ export default new Router({
   mode: 'history',
   routes: [{
     path: '/',
-    redirect: '/login',
+    redirect: '/start',
   },
   {
     path: '/login',
