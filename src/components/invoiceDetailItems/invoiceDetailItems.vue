@@ -11,7 +11,7 @@
     //这是中部分项组件（序号，所属期，发票数量，文件）(适用于1.4.1, 1.5.1, 1.6.1 ,1.7.1, 1.8.1 , 1.9.1)
     export default {
         props:{
-          content:Array //文件项列表
+          content:Array, //文件项列表
         },
         data() {
             return {}

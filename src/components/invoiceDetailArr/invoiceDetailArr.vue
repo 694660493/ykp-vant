@@ -21,7 +21,7 @@
     //这是列表组件（1，2018-06，0，已上传，图片）(适用于1.4.1, 1.5.1, 1.6.1 ,1.7.1, 1.8.1 , 1.9.1,)
     export default {
         props:{
-          arrContent:Array //具体内容列表
+          arrContent:Array, //具体内容列表
         },
         data() {
             return {}

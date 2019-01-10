@@ -9,6 +9,7 @@ import App from './App'
 import router from './router'
 import axios from './api/ajax.js';
 import url from './api/url';
+import vFooter from './components/vFooter'
 import invoiceTop from './components/invoiceTop/invoiceTop'
 import invoiceDetailItems from "./components/invoiceDetailItems/invoiceDetailItems"
 import invoiceDetailArr from "./components/invoiceDetailArr/invoiceDetailArr"
@@ -21,6 +22,7 @@ Vue.config.productionTip = false
 Vue.prototype.$ajax = axios;
 Vue.prototype.$url = url;
 Vue.prototype.toast = toast;
+Vue.component("vFooter",vFooter) //定义全局组件 footer
 Vue.component("invoiceTop",invoiceTop) //定义全局组件 invoiceTop
 Vue.component("invoiceDetailItems",invoiceDetailItems) //定义全局组件 invoiceDetailItems
 Vue.component("invoiceDetailArr",invoiceDetailArr) //定义全局组件 invoiceDetailArr
