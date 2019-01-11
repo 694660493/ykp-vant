@@ -8,8 +8,11 @@ import uploadInvoice from '../view/uploadInvoice/uploadInvoice';
 import invoiceAuth from '../view/invoiceAuth/invoiceAuth';
 import invoiceDetailEdit from '../view/invoiceDetailEdit/invoiceDetailEdit';
 import assetsLiabilities from "../view/assetsLiabilities/assetsLiabilities";
+import assetsProfit from "../view/assetsProfit/assetsProfit";
 import startPage from '../view/startPage/startPage'
 import homePage from '../view/homePage/homePage'
+import taxSituation from '../view/taxSituation/taxSituation'
+import financeTips from '../view/financeTips/financeTips'
 
 
 import {
@@ -17,6 +20,7 @@ import {
 } from 'upath';
 
 Vue.use(Router)
+
 
 export default new Router({
   mode: 'history',
@@ -57,11 +61,19 @@ export default new Router({
       }
     },
     {
+      path: '/tax',
+      name: 'taxSituation',
+      component: taxSituation,
+      meta: {
+        title: '纳税情况_05'
+      }
+    },
+    {
       path: '/invoice',
       name: 'invoiceDetail',
       component: invoiceDetail,
       meta: {
-        title: '发票采集页面'
+        title: '发票采集页面_01'
       }
     },
     {
@@ -69,7 +81,7 @@ export default new Router({
       name: 'invoiceAuth',
       component: invoiceAuth,
       meta: {
-        title: '发票认证页面'
+        title: '发票认证页面_02'
       }
     },
     {
@@ -85,7 +97,23 @@ export default new Router({
       name: 'assetsLiabilities',
       component: assetsLiabilities,
       meta: {
-        title: '资产负债表'
+        title: '资产负债表_03'
+      }
+    },
+    {
+      path: '/assetsProfit',
+      name: 'assetsProfit',
+      component: assetsProfit,
+      meta: {
+        title: '利润表_04'
+      }
+    },
+    {
+      path: '/finance',
+      name: 'financeTips',
+      component: financeTips,
+      meta: {
+        title: '财务提示单_04'
       }
     },
   {

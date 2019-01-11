@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" name="viewport">
+  <meta name="author" content="Victor,surexq@163.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit">
+  <meta name="robots" content="all">
+  <meta name="Copyright" content="WAPWEI">
+  <link rel="stylesheet" href="./static/css/common.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_887525_nttsswi25di.css">
+  <style type="text/css">
+    .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <!--使用iconfont字体图标-->
+  <script src="http://at.alicdn.com/t/font_1002760_4y8gr9uus88.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/** todo IE9 慎用 flex 布局 **/
+/*flex盒子布局,ub开头*/
+
+.ub {
+  display: -webkit-box !important;
+  position: relative;
+}
+
+.ub-ver {
+  /*垂直排列*/
+  -webkit-box-orient: vertical;
+}
+
+.ub-pc {
+  /*垂直排列：垂直居中   | 水平排列：水平居中*/
+  -webkit-box-pack: center;
+}
+
+.ub-pe {
+  /*垂直排列：底部   | 水平排列：右边*/
+  -webkit-box-pack: end;
+}
+
+.ub-pj {
+  /*分散排列*/
+  -webkit-box-pack: justify;
+}
+
+.ub-ac {
+  /*垂直排列：水平居中  | 水平排列：垂直居中*/
+  -webkit-box-align: center;
+}
+
+.ub-ae {
+  /*垂直排列：右边   | 水平排列：底部*/
+  -webkit-box-align: end;
+}
+
+.ub-f1 {
+  -webkit-box-flex: 1;
+}
+
+.ub-f2 {
+  -webkit-box-flex: 2;
+}
+
+.w1 {
+  width: 1px;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  border: 0px;
+  outline: none;
+  width: 100%;
+}

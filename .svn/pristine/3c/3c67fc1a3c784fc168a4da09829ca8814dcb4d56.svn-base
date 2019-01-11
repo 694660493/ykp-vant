@@ -1,0 +1,204 @@
+<template>
+  <div class="wrap">
+    <invoiceTop :title="invoiceTopMsg" :bg_color="color"></invoiceTop>
+    <div class="invoiceInput">
+      <div class="invoiceItemInfo_first">
+        <span class="msg">发票类型</span>
+        <div class="content">
+          收入发票
+          <span>▲</span>
+        </div>
+    
+      </div>
+      <div class="invoiceItemInfo-second">
+        <span class="msg">所属期</span>
+        <div class="content">
+          2018-09
+          <span>▲</span>
+        </div>
+    
+      </div>
+      <div class="invoiceItemInfo-third">
+        <span class="msg">文件上传</span>
+        <div class="uploadContent">
+          <div class="section_one">
+            <div>+</div>
+          </div>
+          <div class="section_two">
+            <div class="content">
+              <span>2018-12-29 11:22:33 | 共两张</span>
+              <img src="../../assets/img/pic.jpeg" alt="">
+            </div>
+          </div>
+          <div class="section_three">
+            <div class="content">
+              <span>2018-12-29 11:22:33 | 共两张</span>
+              <img src="../../assets/img/pic.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="invoiceItemInfo-fourth">
+        <span>备注</span>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="invoiceInfo">
+      <div class="info_msg">修改记录</div>
+      <ul class="content">
+        <li class="content_item">
+          <span class="item_key">创建人</span>
+          <span class="item_value">李辞</span>
+        </li>
+        <li class="content_item">
+          <span class="item_key">创建时间</span>
+          <span class="item_value">2018年12月11日 17: 32: 31</span>
+        </li>
+        <li class="content_item">
+          <span class="item_key">最后修改人</span>
+          <span class="item_value">客户</span>
+        </li>
+        <li class="content_item">
+          <span class="item_key">最后修改时间</span>
+          <span class="item_value">2018年12月11日 17: 32: 31</span>
+        </li>
+      </ul>
+    </div>
+    <van-button type="default" class="button">确认修改</van-button>
+  </div>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+              invoiceTopMsg:"发票认证资编辑",
+              color:"#0AAFD0"
+            }
+        }
+    }
+</script>
+
+<style scoped lang='scss'>
+  .wrap{
+    width: 100%;
+    background-color: #F9F9F9;
+    .invoiceInput{
+      padding-top: 20px;
+      width: 94.7%;
+      background-color: #fff;
+      margin: 10px auto ;
+      .invoiceItemInfo_first,.invoiceItemInfo-second{
+        position: relative;
+        display: flex;
+        padding: 0 10px 0 10px;
+        justify-content: space-between;
+        align-items: center;
+        .msg{
+          font-family: PingFangSC-Regular;
+          font-size: 12px;
+          color: #313131;
+          letter-spacing: 0;
+          line-height: 52px;
+        }
+        .content{
+          width: 265px;
+          height: 32px;
+          line-height: 32px;
+          border: 1px solid gray;
+          box-sizing: border-box;
+          padding:0 10px 0 10px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .invoiceItemInfo-third{
+        display: flex;
+        padding: 0 10px 0 10px;
+        justify-content: space-around;
+        .uploadContent{
+          width: 265px;
+          height: 356px;
+          background: #F9F9F9;
+          border: 1px solid #D8D8D8;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          .section_one{
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+          }
+          .section_two,.section_three{
+            .content{
+              img{
+                width: 80px;
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+      .invoiceItemInfo-fourth{
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        padding:0 10px 0 10px;
+        justify-content: space-around;
+        textarea{
+          border: 1px solid gray;
+          width: 264px;
+          height: 64px;
+        }
+      }
+    }
+    .invoiceInfo{
+      width: 355px;
+      height: 196px;
+      background-color: #ffffff;
+      margin: 5px auto;
+      .info_msg{
+        width:80px;
+        height: 36px;
+        line-height: 36px;
+        font-family: PingFangSC-Medium;
+        font-size: 12px;
+        color: #7D7D7D;
+        letter-spacing: 0.38px;
+        text-align: left;
+      }
+      .content{
+        width: 100%;
+        padding-left: 10px;
+        .content_item{
+          height: 34px;
+          line-height: 34px;
+          &:nth-last-child(1){
+            .item_key{
+              display: block;
+              width: 59px;
+              height: 28px;
+              font-size: 12px;
+              line-height: 12px;
+              margin-right: 12px;
+              float: left;
+            }
+          }
+          .item_key{
+            display: block;
+            width: 71px;
+            float: left;
+            
+          }
+        }
+      }
+    }
+    .button{
+      width: 98.7%;
+      height: 44px;
+      background-image: linear-gradient(90deg, #3EECAE 0%, #09AED1 100%);
+      box-shadow: 0 -2px 4px 0 #D3D3D3;
+      border-radius: 4px;
+    }
+  }
+</style>

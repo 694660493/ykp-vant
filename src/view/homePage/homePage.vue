@@ -22,34 +22,48 @@
               <div class="itemImg"></div>
               <span class="itemText">银行流水</span>
             </li>
-            <li class="coopapationItem">
+            <li class="coopapationItem" @click="toNewPage('invoice')">
               <div class="itemImg"></div>
-              <span class="itemText">员工社保</span>
+              <span class="itemText">发票采集</span>
+            </li>
+            <li class="coopapationItem" @click="toNewPage('auth')">
+              <div class="itemImg"></div>
+              <span class="itemText">发票认证</span>
             </li>
           </ul>
         </div>
       </div>
       <div class="companyForm">
-        <p>企业报表</p>
+        <p class="compangText">企业报表</p>
         <div class="formList">
           <van-row type="flex" justify="space-around">
-            <van-col span="6">
-              <div class="itemImg"></div>
-              <p class="itemText">企业负债表</p>
+            <van-col span="6" >
+              <div  @click="toNewPage('assets')">
+                <div class="itemImg"></div>
+                <p class="itemText">企业负债表</p>
+              </div>
             </van-col>
             <van-col span="6">
-              <div class="itemImg"></div>
-              <p class="itemText">利润表</p>
+              <div  @click="toNewPage('assetsProfit')">
+                <div class="itemImg"></div>
+                <p class="itemText">利润表</p>
+              </div>
             </van-col>
           </van-row>
           <van-row type="flex" justify="space-around">
+            
             <van-col span="6">
-              <div class="itemImg"></div>
-              <p class="itemText">纳税表</p>
+              <div  @click="toNewPage('tax')">
+                <div class="itemImg"></div>
+                <p class="itemText">纳税表</p>
+              </div>
             </van-col>
+            
             <van-col span="6">
-              <div class="itemImg"></div>
-              <p class="itemText">提示表</p>
+              <div  @click="toNewPage('finance')">
+                <div class="itemImg"></div>
+                <p class="itemText">提示表</p>
+              </div>
             </van-col>
           </van-row>
         </div>
@@ -85,40 +99,40 @@
         },
         mounted() {
           this.$nextTick(() =>{
-            //动态获取ul的宽度，但是还是不能滑动
+            //动态获取ul的宽度
             let totalWidth=0;
             let div=document.querySelector(".coopapationList")
             let array=Array.from(div.children);
             array.forEach(function (element,index) {
               let style=window.getComputedStyle(element,null)
-              console.log(style.marginRight);
               index!==array.length-1 ? totalWidth+=parseInt(style.width)+parseInt(style.marginRight) : totalWidth+=parseInt(style.width)
-
             });
             div.style.width=totalWidth+"px";
             this.$nextTick(()=>{
               if (!this.scroll) {
-                console.log("新建scroll");
-
                 this.scroll = new BScroll(".wrapper", {
                   click: true,
                   scrollX: true,
                 });
-                console.log(this.scroll.hasHorizontalScroll);
               } else {
-                console.log("进入刷新方法");
                 this.scroll.refresh();
               };
             });
-            console.log(this.scroll);
           })
-
+        },
+        methods:{
+          toNewPage:function (path) {
+            this.$router.push({
+              path
+            })
+          }
         }
     }
 </script>
 
 <style scoped lang='scss'>
   .wrap{
+    padding-bottom: 60px;
     width: 100%;
     background-color: #f6faff;
     .topHeader{
@@ -159,11 +173,12 @@
     }
     .coopapationItem{
       width: 94.7%;
-      margin: 30px auto;
+      margin: 30px auto 6px;
       p{
         font-family: PingFangSC-Semibold;
         font-size: 14px;
-        color: #7D7D7D;
+        color: #8c8d8e;
+        padding-left: 12px;
         letter-spacing: 0;
         text-align: left;
       }
@@ -213,33 +228,49 @@
       height: 218px;
       margin: 10px auto;
       background-color: #fff;
-      p{
+      box-shadow: 0 1px 4px 0 #E4E4E4;
+      border-radius: 4px;
+      .compangText{
+        padding-left: 12px;
         font-family: PingFangSC-Semibold;
         height: 36px;
         line-height: 36px;
         font-size: 14px;
-        color: #7D7D7D;
+        color: #8c8d8e;
         letter-spacing: 0;
         text-align: left;
+        border: 1px solid #EDEDED;
       }
       .formList{
+        padding-top: 10px;
+        .van-row{
+          &:nth-child(1){
+            margin-bottom: 24px;
+          }
+        }
         .itemImg{
-          margin: 0 auto;
+          margin: 0 auto 5px;
           width: 50px;
           height: 40px;
-          background: url("../../assets/img/tax.png") no-repeat;
+          background: url("../../assets/img/tax_bg.png") no-repeat;
           background-size: cover;
         }
         .itemText{
           text-align: center;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #313131;
+          letter-spacing: 0;
         }
       }
     }
     .progressSpeed{
       width: 355px;
       height: 157px;
-      margin: 10px auto 80px;
+      margin: 10px auto;
       background: #fff;
+      box-shadow: 0 1px 4px 0 #E4E4E4;
+      border-radius: 4px;
       .title{
         height: 36px;
         line-height: 36px;
@@ -249,9 +280,10 @@
         color: #7D7D7D;
         letter-spacing: 0;
         text-align: left;
+        border-bottom: 1px solid #EDEDED;
       }
       .progressWrap{
-        border-top: 1px solid #f6faff;
+       
         height: 121px;
         display: flex;
         justify-content: space-around;
@@ -263,12 +295,15 @@
             box-sizing: border-box;
             width: 56px;
             height: 56px;
-            text-align: center;
-            line-height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 50%;
             border: 2px solid #3ECBE7;
             .img_text{
-              font-size: 18px;
+              font-family: PingFangSC-Regular, sans-serif;
+              color:#313131;
+              font-size: 23px;
             }
           }
           .progressText{

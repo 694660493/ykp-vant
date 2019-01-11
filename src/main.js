@@ -27,6 +27,9 @@ Vue.component("invoiceTop",invoiceTop) //定义全局组件 invoiceTop
 Vue.component("invoiceDetailItems",invoiceDetailItems) //定义全局组件 invoiceDetailItems
 Vue.component("invoiceDetailArr",invoiceDetailArr) //定义全局组件 invoiceDetailArr
 router.beforeEach((to, from, next) => {
+  if(from.name=='homePage'){
+    scrollTo(0,0); //路由跳转跳转到顶部
+  }
   if (to.name === null) {
     from.name ? next({
       name: from.name

@@ -1,5 +1,5 @@
 <template>
-  <van-tabbar v-model="active" active-color="#2fdbb7">
+  <van-tabbar v-model="active" style="height:60px" active-color="#2fdbb7">
     <van-tabbar-item icon="search">
       <span>首页</span>
       <img
@@ -32,5 +32,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+    
 </style>

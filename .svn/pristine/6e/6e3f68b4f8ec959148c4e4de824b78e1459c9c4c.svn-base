@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="21px" viewBox="0 0 24 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>路径</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="607" width="375" height="60"></rect>
+        <filter x="-1.9%" y="-15.0%" width="103.7%" height="123.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.885549532   0 0 0 0 0.885549532   0 0 0 0 0.885549532  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="财税APP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-我的" transform="translate(-81.000000, -618.000000)">
+            <rect fill="#F6FAFF" x="0" y="0" width="375" height="667"></rect>
+            <g id="矩形">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="分组-2" transform="translate(0.000000, 607.000000)">
+                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="186" height="60"></rect>
+                <path d="M105,19.9374219 L93,11 L81,19.9374219 L81,20.75 L84.4285714,20.75 L84.4285714,30.5 C84.4313663,31.327412 85.1972434,31.9975545 86.1428571,32 L90.4285714,32 L90.4285714,25.25 C90.4285714,24.0073593 91.5798392,23 93,23 C94.4201608,23 95.5714286,24.0073593 95.5714286,25.25 L95.5714286,32 L99.8571429,32 C100.802757,31.9975545 101.568634,31.327412 101.571429,30.5 L101.571429,20.75 L105,20.75 L105,19.9374219 Z" id="路径" fill="#2fdbb7"></path>
+            </g>
+        </g>
+    </g>
+</svg>
